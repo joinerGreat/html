@@ -1,0 +1,33 @@
+HTML5 Placeholder实现input背景文字提示效果
+语法基本是这个样子：<input placeholder=”提示信息...”>
+用CSS美化Placeholder提示信息的样式
+为了最大化的兼容所有浏览器，给CSS里的placeholder属性添加浏览器引擎前缀还是有必要的。
+
+- 谷歌浏览器(Webkit): ::-webkit-input-placeholder pseudo-element;
+
+- IE10: :-ms-input-placeholder pseudo-class;
+
+- 火狐浏览器(Gecko18-): :-moz-placeholder pseudo-class;
+
+- 火狐浏览器(Gecko19+): ::-moz-placeholder pseudo-element;
+
+- Opera(Presto): 无。
+/* WebKit browsers */
+::-webkit-input-placeholder {
+	color: #777;
+}
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder {
+	color: #777;
+	opacity: 1;
+}
+/* Mozilla Firefox 19+ */
+::-moz-placeholder {
+	color: #777;
+	opacity: 1;
+}
+/* Internet Explorer 10+ */
+:-ms-input-placeholder {
+	color: #777;
+}
+各种浏览器对HTML5/CSS3里出现的新特征、新属性的支持是逐步提高的，最终所有的浏览器都会完全支持HTML5/CSS3，这是毫无疑问的。目前，对HTML5的placeholder属性支持的浏览器有谷歌浏览器、火狐浏览器、Safari、Opera，还有IE10+。
